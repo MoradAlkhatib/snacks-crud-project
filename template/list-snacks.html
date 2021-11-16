@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>All Snacks</h1>
+<ol>
+
+{% for snack in object_list %}
+    <h3 style="color: brown;"><li><a style="display: ruby-base; direction: none;" href="{% url 'details' snack.pk %}"> {{snack}}</a></li></h3>
+{% endfor %}
+</ol>
+
+<h2><a style="color: red;" href="{% url 'create' %}">Create A New Snack</a></h2> 
+{% endblock %}
