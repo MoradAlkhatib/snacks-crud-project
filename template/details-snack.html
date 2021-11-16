@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Title: </h3>{{detailsSnack.title}} <br/>
+<h2>description: </h2>{{detailsSnack.description}}
+<div style="display: grid; width: 200px; gap: 5px; margin-top: 10px;" >
+<button style="background-color: rgb(143, 188, 145);"><a href="{% url 'update' detailsSnack.pk  %}">update</a></button>
+<button style="background-color: red;"><a href="{% url 'delete' detailsSnack.pk  %}">Delete</a></button>
+<button style="background-color: rosybrown;"><a href="{% url 'all' %}">Back To Snacks</a></button>
+</div>
+{% endblock %}
